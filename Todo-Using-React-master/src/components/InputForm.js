@@ -18,14 +18,14 @@ const InputForm = (props) => {
 
     return (
         <form onSubmit={formSubmitHandler} className={styles['todo-input']} >
-            <label htmlFor="todo">Add Todo</label>
+            <label htmlFor="todo">TO-DO LIST</label>
             <input
                 type="text"
                 id="todo"
                 onChange={inputChangeHandler}
                 value={input}
             />
-            <button type="submit">Add Todo</button>
+            <button type="submit">Add<button>
         </form>
     )
 }
