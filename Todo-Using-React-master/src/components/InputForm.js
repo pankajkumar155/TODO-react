@@ -11,21 +11,27 @@ const InputForm = (props) => {
 
     const formSubmitHandler = (e) => {
         e.preventDefault();
-        props.addTodo(input);
-        setInput("");
+        if(input !== "")
+        {
+           
+            props.addTodo(input);
+            setInput("");
+
+        }
+       
     }
 
 
     return (
         <form onSubmit={formSubmitHandler} className={styles['todo-input']} >
-            <label htmlFor="todo">TO-DO LIST</label>
+            <label htmlFor="todo">Add Todo</label>
             <input
                 type="text"
                 id="todo"
                 onChange={inputChangeHandler}
                 value={input}
             />
-            <button type="submit">Add<button>
+            <button type="submit">Add Todo</button>
         </form>
     )
 }
